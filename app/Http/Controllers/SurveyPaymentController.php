@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Payment;
+use App\Models\SurveyPayment;
 use Illuminate\Http\Request;
 
-class PaymentController extends Controller
+class SurveyPaymentController extends Controller
 {
     public function store(Request $request)
     {
@@ -17,13 +17,13 @@ class PaymentController extends Controller
             'total' => 'required|numeric',
         ]);
 
-        $payment = Payment::create($data);
+        $payment = SurveyPayment::create($data);
         return response()->json($payment, 201);
     }
 
     public function index()
     {
-        $payments = Payment::all();
+        $payments = SurveyPayment::all();
         return response()->json($payments);
     }
 }
