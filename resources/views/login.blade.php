@@ -3,57 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Menggunakan asset untuk link CSS -->
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link href="css/bootstrap.min.css">
     <title>Login Page</title>
 </head>
 <body>
     <nav>
         <div class="logo">
-            <!-- Menggunakan asset untuk gambar -->
-            <img src="{{ asset('logo sementara.png') }}" alt="Logo">
+            <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul>
-            <!-- Menggunakan route() untuk menuju halaman homepage -->
-            <li><a href="{{ route('homepage') }}">Home</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Layanan</a></li>
-            <!-- Menggunakan route() untuk menuju halaman login -->
-            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a href="/HTML/homepage.html">Home</a></li>
+            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
+            <li><a href="/HTML/service.html">Layanan</a></li>
+            <li><a href="/HTML/login.html">Login</a></li>
         </ul>
     </nav>
-    
     <section class="login">
         <div class="container">
             <div class="login-box">
                 <div class="login-header">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon"><img src="/pfp.png" alt="profile-pic"></div>
                     <h1>SELAMAT DATANG!</h1>
                     <p>Silahkan Log In</p>
                 </div>
-                
-                <!-- Form Login menggunakan route() pada action -->
-                <form class="login-form" action="{{ route('login') }}" method="POST">
-                    @csrf
+                <form class="login-form">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan username Anda" required>
                     
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
                     
-                    <button type="submit" class="btn-login">Log In</button>
+                    <form action="homepageLogin.html">
+                        <button type="submit" class="btn-login">Log In</button>
+                    </form>
                 </form>
-                
                 <p class="register-link">
-                    Tidak punya akun? <a href="{{ route('signin') }}">Daftar disini</a>
+                    Tidak punya akun? <a href="signin.html">Daftar disini</a>
                 </p>
             </div>
             <div class="image-box">
-                <!-- Menggunakan asset untuk gambar -->
-                <img src="{{ asset('box in.png') }}" alt="Tumpukan Kotak" />
+                <img src="/box in.png" alt="Tumpukan Kotak" />
             </div>
         </div>
     </section>
+
+    </nav>
 </body>
 </html>

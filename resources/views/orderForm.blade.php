@@ -13,8 +13,8 @@
         </div>
         <ul class="nav-links">
             <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/orderForm.html">Tentang</a></li>
-            <li><a href="#">Layanan</a></li>
+            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
+            <li><a href="/HTML/service.html">Layanan</a></li>
             <li><a href="/HTML/login.html">Login</a></li>
         </ul>
     </nav>
@@ -107,10 +107,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Layanan Kami</a></li>
-                    <li><a href="#">Order Jasa</a></li>
-                    <li><a href="#">Testimoni</a></li>
+                    li><a href="/HTML/homepage.html">Home</a></li>
+                    <li><a href="/HTML/service.html">Layanan Kami</a></li>
+                    <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
+                    <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>

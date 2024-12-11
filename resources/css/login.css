@@ -1,166 +1,163 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
-  .body {
-    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
-    color: black;
-    min-height: 100vh; 
-  }
-
-  nav{
-    background-color: #C1A57B;
-    justify-content: space-between;
-    align-items:center;
-    display: flex;
-    padding: 1 rem 5%;
-    height: 80px;
-    padding-left: 7rem ;
-    padding-right: 7rem;
-    
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1,2rem;
-  }
-  
-  nav div img {
-    width: 50px;
-  }
-  
-  nav ul li a {
-    color: black;
-    text-decoration: none;
-    margin: 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 3px 0;
-    transition: all 300ms; 
-  }
-  
-  nav ul li a:hover {
-    color: brown;
-    transform: scale(1.1);;
-  }
-
-  .login{
-    min-width: 1080px;
-    padding-top: 2rem;
-    padding-bottom: 310px;
-    padding-left:  160px; ;
-    padding-right: 160px;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-
-  .login-box{
-    width: 500px;
-    height: 600px;
-    background-color: #30475E ;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .login .login-logo img{
-      width: 70px;
-      height: 70px;
-      margin-bottom: 1rem;
-
-    }
-
-  form label{
-      display: block;
-      font-size: 1rem;
-      text-align: left;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-  form input {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius:15px;
-  }
-
-  form .opsi {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-
-  form .opsi p{
-    color: white;
-    
-  }
-
-  form .opsi a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: #C1A57B;
-    transition: all 300ms;
-    margin-bottom: 1rem;
-  }
-
-  form .opsi a:hover {
-    color: #ffffff;
-    border-bottom: 1px solid #ffffff;
-  }
-
-  form button{
-    width: 30%;
-    padding: 0.5rem;
-    border: none;
-    background-color: #C1A57B;
-    color: #30475E;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-  }
-
-  form button:hover{
-    background-color: #3e3a3a;
-    color: #ffffff;
-  }
-
-  .Sosmed {
-    margin-top: 1rem;
+.body {
+  font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+  color: black;
+  min-height: 100vh; 
 }
 
-  .Sosmed p {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-  }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #C1A57B;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 1rem 5%;
+  height: 80px;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  width: 100%;
+  z-index: 1000; /* Menambahkan z-index untuk memastikan di atas */
+}
 
-  .logoSosmed {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  .logoSosmed .circle {
-      width: 4rem;
-      height: 4rem;
-      background-color: rgb(255, 255, 255);
-      border-radius: 50%;
-      cursor: pointer;
-      margin-bottom: 4rem;
-      margin: 0.3px;
-  }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1,2rem;
+  width: fit-content;
+}
+
+nav div img {
+  width: 50%;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 3px 0;
+  transition: all 300ms; 
+}
+
+nav ul li a:hover {
+  color: brown;
+  transform: scale(1.1);;
+}
+
+
+.login{
+  padding-top: 0;
+  width: auto;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin: 0 ;
+  
+}
+
+.login-box {
+    background-color: #2E4A62;
+    color: #ffffff;
+    padding: 1rem;
+    padding-left: 130px;
+    padding-right: 130px;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-icon {
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+   text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-login {
+  width: 40%;
+  padding: 0.5rem;
+  border: none;
+  background-color: #C1A57B;
+  color: #30475E;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;   
+}
+
+.btn-login:hover {
+  background-color: #3e3a3a;
+  color: #ffffff;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #C1A57B;
+    text-decoration: underline;
+    transition: 0.3 ease;
+}
+
+.register-link a:hover{
+  color: #3e3a3a;
+}
+
+.image-box {
+    width: 60%;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

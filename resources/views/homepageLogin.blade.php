@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>HOMEPAGE LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/css/homepage.css">
+    <link rel="stylesheet" href="/CSS/homepage.css">
     <link href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
@@ -15,8 +15,8 @@
         </div>
         <ul>
             <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/pesanLyn.html">Tentang</a></li>
-            <li><a href="#">Layanan</a></li>
+            <li><a href="/">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
             <li><a href=""></a>👤</li>
         </ul>
     </nav>
@@ -227,10 +227,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Layanan Kami</a></li>
-                    <li><a href="#">Order Jasa</a></li>
-                    <li><a href="#">Testimoni</a></li>
+                  <li><a href="/HTML/homepage.html">Home</a></li>
+                  <li><a href="/HTML/service.html">Layanan Kami</a></li>
+                  <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
+                  <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>

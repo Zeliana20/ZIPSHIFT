@@ -81,6 +81,10 @@ nav {
   z-index: 1000; /* Menambahkan z-index untuk memastikan di atas */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -196,7 +200,7 @@ nav ul li a:hover {
 .set-card p{
   font-size: 14px;
     font-weight: bold;
-    color: white;
+    color: #30475E;
     text-transform: uppercase;
 }
 

@@ -1,304 +1,309 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
-  .body {
-    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
-    color: black;
-    min-height: 100vh; 
-  }
+.body {
+  font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+  color: black;
+  min-height: 100vh; 
+}
 
-  nav{
-    background-color: #C1A57B;
-    justify-content: space-between;
-    align-items:center;
-    display: flex;
-    padding: 1 rem 5%;
-    height: 80px;
-    padding-left: 7rem ;
-    padding-right: 7rem;
-    
-  }
+nav{
+  background-color: #C1A57B;
+  justify-content: space-between;
+  align-items:center;
+  display: flex;
+  padding: 1 rem 5%;
+  height: 80px;
+  padding-left: 7rem ;
+  padding-right: 7rem;
   
-  nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1,2rem;
-  }
-  
-  nav div img {
-    width: 50px;
-  }
-  
-  nav ul li a {
-    color: black;
-    text-decoration: none;
-    margin: 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 3px 0;
-    transition: all 300ms; 
-  }
-  
-  nav ul li a:hover {
-    color: brown;
-    transform: scale(1.1);;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1,2rem;
+}
+
+nav div img {
+  width: 50px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 3px 0;
+  transition: all 300ms; 
+}
+
+nav ul li a:hover {
+  color: brown;
+  transform: scale(1.1);;
+}
 
 
 .progress-section {
-    text-align: center;
-    padding: 2rem 0;
-    background: #E8E0D7;
+  text-align: center;
+  padding: 2rem 0;
+  background: #E8E0D7;
 }
 
 .progress {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    padding: 2rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2rem 5%;
 }
 
 .garis-progress {
-    position: absolute;
-    top: 37%;
-    left: 7%;
-    right: 7%;
-    bottom: 50%;
-    height: 4px;
-    background-color: #C1A57B;
-    z-index: 0;
+  position: absolute;
+  top: 37%;
+  left: 7%;
+  right: 7%;
+  bottom: 50%;
+  height: 4px;
+  background-color: #C1A57B;
+  z-index: 0;
 }
 
 .langkah {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .buletan {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: #E5E7EB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 0.5rem
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #E5E7EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem
 
 }
 
 .buletan.udah {
-    background-color: #2C3E50;
+  background-color: #2C3E50;
 }
 
 .buletan.aktif {
-    background-color: #C1A57B;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #C1A57B;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .teks-progress {
-    font-size: 1rem;
-    color: #4B5563;
-    margin-top: 0.5rem;
-    font-weight: 600;
+  font-size: 1rem;
+  color: #4B5563;
+  margin-top: 0.5rem;
+  font-weight: 600;
 }
 
 .subtitle{
-    font-size: 32px;
-    margin-top: 2rem;
-    color: #30475E;
-    text-align: center;
+  font-size: 32px;
+  margin-top: 2rem;
+  color: #30475E;
+  text-align: center;
 }
 
 .service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .card {
-    padding: 2rem;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    background: #fff;
-    transition: transform 0.3s;
+  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    color: #C4B5A0;
+  transform: scale(1.05);
+  color: #C4B5A0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .form-packing {
-    background-color: #DFD3C3;
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
-    max-width: 600px;
-    text-align: center;
-    margin-bottom: 4.5rem;
+  background-color: #DFD3C3;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 4.5rem;
 }
 
 .form-packing h3{
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    text-decoration: solid 2px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  text-decoration: solid 2px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form label {
-    font-size: 1rem;
-    color: #4D3526;
-    font-weight: 200;
-    margin-bottom: -0.5rem;
-    text-align: left;
+  font-size: 1rem;
+  color: #4D3526;
+  font-weight: 200;
+  margin-bottom: -0.5rem;
+  text-align: left;
 }
 
 .form input,
 .form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #8B7355;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #8B7355;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
 }
 
 .form textarea {
-    resize: vertical; /* Memungkinkan pengguna untuk mengubah ukuran textarea */
-    min-height: 80px;
+  resize: vertical; /* Memungkinkan pengguna untuk mengubah ukuran textarea */
+  min-height: 80px;
 }
 
 .form .price {
-    font-size: 1rem;
-    color: #4D3526;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1rem;
-    border: 1px solid #4D3526 ;
-    background-color: #E8E0D7;
-    padding: 1rem;
-    border-radius: 1rem;
+  font-size: 1rem;
+  color: #4D3526;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  border: 1px solid #4D3526 ;
+  background-color: #E8E0D7;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .form .buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
-    gap: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .buttons button {
-    padding: 0.65rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .buttons button:first-child {
-    background-color: #C4B5A0;
-    color: #4D3526;
-    border: 1px solid #8B7355;
+  background-color: #C4B5A0;
+  color: #4D3526;
+  border: 1px solid #8B7355;
 }
 
 .buttons button:last-child {
-    background-color: #2C3E50;
-    color: #FFF;
+  background-color: #2C3E50;
+  color: #FFF;
 }
 
 .buttons button:last-child:hover {
-    background-color: #ffffff;
-    color: #30475E;
-    transition: 0.3ms;
+  background-color: #ffffff;
+  color: #30475E;
+  transition: 0.3ms;
 }
 
 .buttons button:first-child:hover {
-    background-color: #4D3526;
-    color: #C4B5A0;
-    transition: 0.3ms;
+  background-color: #4D3526;
+  color: #C4B5A0;
+  transition: 0.3ms;
 }
 
 .footer{
-    background-color: #222831;
-    height: 335px;
-    text-align: center;
-    padding: 50px 80px;
-  }
-  
-  .footerz{
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  
-  .footer-section{
-    flex: 1;
-    min-width: 20px;
-  
-  }
-  
-  .footer-section h3{
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    color: #bfb2b2;
-    text-align: left;
-  }
-  
-  .footer-section p{
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    color: white;
-    text-align: left;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-  }
-  
-  .footer-section ul li a:hover {
-    text-decoration: underline;
-    color: bisque; 
-  }
+  background-color: #222831;
+  height: 335px;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.footerz{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section{
+  flex: 1;
+  min-width: 20px;
+
+}
+
+.footer-section h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #bfb2b2;
+  text-align: left;
+}
+
+.footer-section p{
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: white;
+  text-align: left;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: bisque; 
+}

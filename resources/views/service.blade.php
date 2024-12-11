@@ -14,8 +14,8 @@
         </div>
         <ul>
             <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Layanan</a></li>
+            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
+            <li><a href="/HTML/service.html">Layanan</a></li>
             <li><a href="/HTML/login.html">Login</a></li>
         </ul>
     </nav>
@@ -51,7 +51,7 @@
         <section class="book-box">
             <div class="head-booking">
                 <h2>Booking Untuk Survei</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non facilisis leo. Nam ex dui, aliquet sed sodales finibus, rhoncus vel metus. Aliquam erat volutpat. Nam gravida ex quis ipsum molestie ultricies. In ultrices congue libero, quis ultrices eros iaculis id. Cras ullamcorper dui eget felis ultricies suscipit. Nulla quis lorem sodales, placerat velit vel, sodales sapien. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non facilisis leo. Nam ex dui, aliquet sed sodales finibus, rhoncus vel metus. ultrices eros iaculis id. Cras ullamcorper dui eget felis ultricies suscipit. Nulla quis lorem sodales, placerat velit vel, sodales sapien. </p>
             </div>
         
             <form class="form-book-survei">
@@ -96,10 +96,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Layanan Kami</a></li>
-                    <li><a href="#">Order Jasa</a></li>
-                    <li><a href="#">Testimoni</a></li>
+                    <li><a href="/HTML/homepage.html">Home</a></li>
+                    <li><a href="/HTML/service.html">Layanan Kami</a></li>
+                    <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
+                    <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>
