@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 // Halaman Utama
-Route::get('/homepage', function () {
+Route::get('/', function () {
     return view('homepage'); // Mengarah ke homepage.blade.php
 });
 
