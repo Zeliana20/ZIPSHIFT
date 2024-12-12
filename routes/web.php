@@ -17,14 +17,14 @@ Route::get('/order-form', function () {
     return view('orderForm'); // Mengarah ke orderForm.blade.php
 });
 
-// Halaman Pesan Layanan
-Route::get('/pesan-layanan', function () {
-    return view('pesanLyn'); // Mengarah ke pesanLyn.blade.php
+// Halaman Pembayaran
+Route::get('/pembayaran', function () {
+    return view('pembayaran'); // Mengarah ke pembayaran.blade.php
 });
 
-// Halaman Service
-Route::get('/service', function () {
-    return view('service'); // Mengarah ke service.blade.php
+// Halaman Selesai
+Route::get('/done', function () {
+    return view('done'); // Mengarah ke done.blade.php
 });
 
 // Halaman Sign In

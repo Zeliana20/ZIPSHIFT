@@ -4,12 +4,6 @@
   box-sizing: border-box;
 } 
 
-.body {
-  font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
-  color: black;
-  min-height: 100vh; 
-}
-
 nav{
   background-color: #C1A57B;
   justify-content: space-between;
@@ -55,18 +49,40 @@ nav ul li a:hover {
 }
 
 
-.progress-section {
+body {
+  font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+  color: black;
+  min-height: 100vh; 
+  background-color:#f4f4f4;
+}
+
+/* Progress Steps */
+.judul {
+  color: #4D3526;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding-left: 4rem;
+}
+
+.bagian-progress {
   text-align: center;
   padding: 2rem 0;
-  background: #E8E0D7;
+  background: white;
+  border: 1.5px solid #4D3526;
+  margin: 2rem 4rem 0;
+  padding-bottom: 0px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .progress {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: relative;
-  padding: 2rem 5%;
+  padding: 1rem 5% 2rem;
 }
 
 .garis-progress {
@@ -76,7 +92,7 @@ nav ul li a:hover {
   right: 7%;
   bottom: 50%;
   height: 4px;
-  background-color: #C1A57B;
+  background: #C1A57B;
   z-index: 0;
 }
 
@@ -89,18 +105,18 @@ nav ul li a:hover {
 }
 
 .buletan {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  background-color: #E5E7EB;
+  background: #E5E7EB;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 1rem;
   color: #fff;
-  margin-bottom: 0.5rem
-
+  margin-bottom: 0.5rem;
+  border: 1px solid #C1A57B;
 }
 
 .buletan.udah {
@@ -109,16 +125,18 @@ nav ul li a:hover {
 
 .buletan.aktif {
   background-color: #C1A57B;
+  border: 2px solid #C1A57B;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .teks-progress {
-  font-size: 1rem;
-  color: #4B5563;
-  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: 4B5563;
   font-weight: 600;
+  margin-top: 0.5rem;
 }
 
+/* Service Cards */
 .subtitle{
   font-size: 32px;
   margin-top: 2rem;
@@ -135,38 +153,45 @@ nav ul li a:hover {
 
 .card {
   padding: 2rem;
-  border: 2px solid #ccc;
+  border: 2px solid #4D3526;
   border-radius: 10px;
   text-align: center;
   background: #fff;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.05);
   color: #C4B5A0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
   display: none;
 }
 
+/* Form */
 .form-packing {
-  background-color: #DFD3C3;
+  background-color: white;
   padding: 3rem;
-  border-radius: 8px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 1100px;
   text-align: center;
   margin-bottom: 4.5rem;
+  border: 1.5px solid #4D3526;
 }
 
 .form-packing h3{
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: left;
   text-decoration: solid 2px;
+  padding-bottom: 1rem;
 }
 
 .form {
@@ -187,10 +212,17 @@ nav ul li a:hover {
 .form textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #8B7355;
+  border: 1.4px solid #8B7355;
   border-radius: 8px;
   background-color: white;
   font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #999;
 }
 
 .form textarea {
@@ -227,9 +259,9 @@ nav ul li a:hover {
 }
 
 .buttons button:first-child {
-  background-color: #C4B5A0;
+  background-color: #D4B483;
   color: #4D3526;
-  border: 1px solid #8B7355;
+  border: 1px solid #B89764;
 }
 
 .buttons button:last-child {
@@ -239,6 +271,7 @@ nav ul li a:hover {
 
 .buttons button:last-child:hover {
   background-color: #ffffff;
+  border: 1.3px solid #30475E;
   color: #30475E;
   transition: 0.3ms;
 }
@@ -247,6 +280,37 @@ nav ul li a:hover {
   background-color: #4D3526;
   color: #C4B5A0;
   transition: 0.3ms;
+}
+
+@media (max-width: 768px) {
+  .judul, .judul2 {
+      font-size: 1.5rem; /* Mengurangi ukuran font untuk judul */
+  }
+
+  .layanan {
+      flex-direction: column; /* Mengatur layanan menjadi kolom pada layar kecil */
+      align-items: center; /* Menyelaraskan item ke tengah */
+  }
+
+  .form-group {
+      max-width: 100%; /* Memastikan form menggunakan lebar penuh pada layar kecil */
+  }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 480px) {
+  .judul {
+      font-size: 1.2rem; /* Ukuran font lebih kecil untuk layar sangat kecil */
+  }
+
+  .form-input {
+      font-size: 0.9rem; /* Mengurangi ukuran font input */
+  }
+
+  .btn {
+      padding: 0.5rem 1rem; /* Mengurangi padding tombol */
+      font-size: 0.9rem; /* Mengurangi ukuran font tombol */
+  }
 }
 
 .footer{

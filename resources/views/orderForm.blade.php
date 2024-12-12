@@ -19,8 +19,9 @@
         </ul>
     </nav>
 
-    <header class="progress-section">
-        <h1 class="title">Progress Pemesanan</h1>
+    <section class="bagian-progress">
+        <!-- progress pemesanan -->
+        <h1 class="judul">Progress Pesanan</h1>
         <div class="progress">
             <div class="garis-progress"></div>
             <div class="langkah">
@@ -32,19 +33,19 @@
                 <span class="teks-progress">Penawaran</span>
             </div>
             <div class="langkah">
-                <div class="buletan">3</div>
+                <div class="buletan"></div>
                 <span class="teks-progress">Pembayaran</span>
             </div>
             <div class="langkah">
-                <div class="buletan">4</div>
+                <div class="buletan"></div>
                 <span class="teks-progress">Selesai</span>
             </div>
         </div>
-        
-    </header>
+    </section>
 
     <main class="main-container">
-        <section class="services">
+        <!-- pilihan layanan -->
+        <section class="layanan">
             <h2 class="subtitle">Pilih Layanan</h2>
             <div class="service-cards">
                 <div class="card" onclick="showForm('packing')">
@@ -53,18 +54,19 @@
                 </div>
                 <div class="card" onclick="showForm('pindahan')">
                     <h3>🏡</h3>
-                    <p>Pindahan Rumah</p>
+                    <p>Pindah Rumah</p>
                 </div>
                 <div class="card" onclick="showForm('packingPindahan')">
                     <h3>🚚</h3>
-                    <p>Packing & Pindahan</p>
+                    <p>Packing & Pindah</p>
                 </div>
             </div>
         </section>
 
-        <section class="form-packing" id="form-packing">
+        <!-- Form Packing -->
+        <section class="form-packing hidden" id="packing">
             <h3>Form Pemesanan Packing Barang</h3>
-            <form class="form">
+            <form class="form" oninput="calculatePrice(this)">
                 <label for="">Nama Lengkap</label>
                 <input type="text" placeholder="Nama Lengkap">
                 <label for="">Nomor Telepon</label>
@@ -73,16 +75,78 @@
                 <textarea placeholder="Alamat"></textarea>
                 <label for="">Daftar Barang</label>
                 <textarea placeholder="Daftar Barang"></textarea>
+                <label>Berat Barang (kg)</label>
+                <input type="number" placeholder="0">
                 <label for="">Tanggal Layanan</label>
                 <input type="date">
-                <div class="price">Perkiraan harga layanan: Rp 10.000.000</div>
+
+                <div class="price">Perkiraan harga layanan: Rp <span>10.000.000</span></div>
                 <div class="buttons">
                     <button type="button" onclick="resetForm()">Batal</button>
-                    <button type="submit">Pesan Sekarang</button>
+                    <button type="button" onclick="navigateToPayment()">Pesan Sekarang</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Form Pindah -->
+        <section class="form-packing hidden" id="pindahan">
+            <h3>Form Pemesanan Pindah Rumah</h3>
+            <form class="form" oninput="calculatePrice(this)">
+                <label for="">Nama Lengkap</label>
+                <input type="text" placeholder="Nama Lengkap">
+                <label for="">Nomor Telepon</label>
+                <input type="tel" placeholder="Nomor Telepon">
+                <label for="">Alamat</label>
+                <textarea placeholder="Alamat"></textarea>
+                <label for="">Alamat Tujuan</label>
+                <textarea placeholder="Alamat Tujuan"></textarea>
+                <label>Jarak (km)</label>
+                <input type="number" placeholder="0">
+                <label for="">Daftar Barang</label>
+                <textarea placeholder="Daftar Barang"></textarea>
+                <label>Berat Barang (kg)</label>
+                <input type="number" placeholder="0">
+                <label for="">Tanggal Layanan</label>
+                <input type="date">
+
+                <div class="price">Perkiraan harga layanan: Rp <span>10.000.000</span></div>
+                <div class="buttons">
+                    <button type="button" onclick="resetForm()">Batal</button>
+                    <button type="submit" onclick="navigateToPayment()">Pesan Sekarang</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Form Packing & Pindah -->
+        <section class="form-packing hidden" id="packingPindahan">
+            <h3>Form Pemesanan Packing & Pindah Rumah</h3>
+            <form class="form" oninput="calculatePrice(this)">
+                <label for="">Nama Lengkap</label>
+                <input type="text" placeholder="Nama Lengkap">
+                <label for="">Nomor Telepon</label>
+                <input type="tel" placeholder="Nomor Telepon">
+                <label for="">Alamat</label>
+                <textarea placeholder="Alamat"></textarea>
+                <label for="">Alamat Tujuan</label>
+                <textarea placeholder="Alamat Tujuan"></textarea>
+                <label>Jarak (km)</label>
+                <input type="number" placeholder="0">
+                <label for="">Daftar Barang</label>
+                <textarea placeholder="Daftar Barang"></textarea>
+                <label>Berat Barang (kg)</label>
+                <input type="number" placeholder="0">
+                <label for="">Tanggal Layanan</label>
+                <input type="date">
+
+                <div class="price">Perkiraan harga layanan: Rp <span>10.000.000</span></div>
+                <div class="buttons">
+                    <button type="button" onclick="resetForm()">Batal</button>
+                    <button type="submit" onclick="navigateToPayment()">Pesan Sekarang</button>
                 </div>
             </form>
         </section>
     </main>
+    <script src="/resources/js/script.js"></script>
 
     <section id="footer" class="footer">
         <div class="footerz">
