@@ -146,7 +146,8 @@
             </form>
         </section>
     </main>
-    <script src="/resources/js/script.js"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+    
 
     <section id="footer" class="footer">
         <div class="footerz">
