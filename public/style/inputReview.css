@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+  
+  .body {
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+    color: black;
+    min-height: 100vh; 
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #C1A57B;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 1rem 5%;
+    height: 80px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    width: 100%;
+    z-index: 1000; /* Menambahkan z-index untuk memastikan di atas */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1,2rem;
+    width: fit-content;
+  }
+  
+  nav div img {
+    width: 50%;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 3px 0;
+    transition: all 300ms; 
+  }
+  
+  nav ul li a:hover {
+    color: brown;
+    transform: scale(1.1);;
+  }
+
+  .rate-us-section {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/image\ 6.png') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Spasi di antara elemen */
+    gap: 20px; /* Jarak antar elemen */
+    padding: 4rem;
+}
+
+.rate-us-section h1{
+    font-size: 48px;
+    font-weight: 800;
+    color: black;
+}
+
+.rate-us-container {
+    background: rgba(29, 53, 87, 0.9); /* Warna biru gelap dengan transparansi */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 573px;
+    color: white;
+}
+
+
+.rate-us-title {
+    flex: 1; /* Memungkinkan judul mengambil ruang yang diperlukan */
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+
+.rate-us-form {
+    flex: 2; /* Form lebih besar daripada judul */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.rate-us-form label {
+    font-weight: bold;
+}
+
+.rate-us-form input,
+.rate-us-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.rate-us-form input:focus,
+.rate-us-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.rate-us-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background: #c9a56d; /* Warna tombol coklat emas */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b38f5b;
+}

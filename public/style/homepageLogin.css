@@ -12,29 +12,27 @@
   
   .homepage {
     position: relative;
+    padding-top: 80px;
   }
   
   .homepage-image {
     width: 100%; 
-    height: auto; 
+    height: 612px; 
     background-size: cover; 
     background-position: center; 
-    height: 80;
+
   }
   
   .homepage-title {
     position: absolute;
-    top: 20px; 
-    left: 20px; 
-    color: white; 
-    font-size: 2em; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-    text-align: center;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    color: white; 
     font-size: 130px; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    text-decoration: none;
   }
   
   .floating-logo1{
@@ -66,16 +64,20 @@
   }
   
   
-  nav{
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #C1A57B;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     display: flex;
-    padding: 1 rem 5%;
+    padding: 1rem 5%;
     height: 80px;
-    padding-left: 7rem ;
+    padding-left: 7rem;
     padding-right: 7rem;
-    
+    width: 100%;
+    z-index: 1000; /* Menambahkan z-index untuk memastikan di atas */
   }
   
   html {
@@ -87,10 +89,11 @@
     display: flex;
     align-items: center;
     gap: 1,2rem;
+    width: fit-content;
   }
   
   nav div img {
-    width: 50px;
+    width: 50%;
   }
   
   nav ul li a {
@@ -171,6 +174,12 @@
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
       gap: 10px;
+      transition: 0.3s ease;
+  }
+  
+  .set-card:hover{
+    transform: scale(1.12);
+    box-shadow:rgba(0, 0, 0, 0.1);
   }
   
   .set-card img{
@@ -181,7 +190,7 @@
   .set-card p{
     font-size: 14px;
       font-weight: bold;
-      color: white;
+      color: #30475E;
       text-transform: uppercase;
   }
   
@@ -215,6 +224,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-layanan:hover{
+    transform: scale(1.05);
+    box-shadow: #222831;
   }
   
   .card-layanan a {
@@ -291,10 +306,10 @@
     height: 700px ;
     padding: 100px 130px;
     align-items: center;
-    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 60vh;
+    
   }
   .review-page {
     text-align: center;
@@ -307,6 +322,7 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     position: relative;
+    text-align: center;
   }
   
   h1::after {
@@ -316,111 +332,6 @@
     height: 2px;
     background-color: #000;
     margin: 10px auto 0;
-  }
-  
-  /* Slideshow Container */
-  .slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  /* Review Card */
-  .review-card {
-    background-color: #d1d1d1;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-  }
-  
-  .info .name {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .info .service {
-    font-size: 14px;
-    color: #777;
-  }
-  
-  .divider {
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    margin: 20px 0;
-  }
-  
-  .meta {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .review {
-    font-size: 14px;
-    color: #444;
-    font-style: italic;
-    line-height: 1.5;
-    padding: 0 10px;
-  }
-  
-  .dots {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .dot.active {
-    background-color: #000;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
   }
   
   .footer{
@@ -433,6 +344,7 @@
   .footerz{
     display: flex;
     justify-content: space-between;
+    text-align: center;
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
@@ -481,3 +393,94 @@
     text-decoration: underline;
     color: bisque; 
   }
+  
+  .reviews {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .reviews h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .reviews-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .review-card {
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    gap: 2rem;
+  }
+  
+  .review-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .profile-info h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .profile-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 0;
+  }
+  
+  .review-details {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .review-content {
+    font-style: italic;
+    color: #333;
+  }
+  
+  .review-content p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #000;
+  }
+  

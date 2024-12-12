@@ -13,17 +13,17 @@
             <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul>
-            <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
-            <li><a href="/HTML/service.html">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="{{ route('login') }}">Login</a></li>
         </ul>
     </nav>
     <section class="login">
         <div class="container">
             <div class="login-box">
                 <div class="login-header">
-                    <div class="profile-icon"><img src="/pfp.png" alt="profile-pic"></div>
+                    <div class="profile-icon"><img src="{{ asset('assets/pfp.png') }}" alt="profile-pic"></div>
                     <h1>SELAMAT DATANG!</h1>
                     <p>Silahkan Log In</p>
                 </div>
@@ -34,16 +34,16 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
                     
-                    <form action="homepageLogin.html">
-                        <button type="submit" class="btn-login">Log In</button>
+                    <form action="{{ route('homepage-login') }}">
+                       <button type="submit" class="btn-login">Log In</button> 
                     </form>
                 </form>
                 <p class="register-link">
-                    Tidak punya akun? <a href="signin.html">Daftar disini</a>
+                    Tidak punya akun? <a href="{{ route('signin') }}">Daftar disini</a>
                 </p>
             </div>
             <div class="image-box">
-                <img src="/box in.png" alt="Tumpukan Kotak" />
+                <img src="{{ asset('assets/box in.png') }}" alt="Tumpukan Kotak" />
             </div>
         </div>
     </section>

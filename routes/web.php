@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+
 
 // Halaman Utama
 Route::get('/', function () {
@@ -41,3 +43,18 @@ Route::get('/tentang-kami', function () {
 Route::get('/homepage-login', function () {
     return view('homepageLogin'); // Mengarah ke homepageLogin.blade.php
 });
+
+Route::get('/service', function () {
+    return view('service'); // Mengarah ke login.blade.php
+});
+
+
+Route::get('/', [PageController::class, 'showHomepage'])->name('homepage'); // Mengarah ke homepage.blade.php
+Route::get('/login', [PageController::class, 'showLogin'])->name('login'); // Mengarah ke login.blade.php
+Route::get('/order-form', [PageController::class, 'showOrderForm'])->name('order-form'); // Mengarah ke orderForm.blade.php
+Route::get('/pembayaran', [PageController::class, 'showPembayaran'])->name('pembayaran'); // Mengarah ke pembayaran.blade.php
+Route::get('/done', [PageController::class, 'showDone'])->name('done'); // Mengarah ke done.blade.php
+Route::get('/signin', [PageController::class, 'showSignin'])->name('signin'); // Mengarah ke signin.blade.php
+Route::get('/tentang-kami', [PageController::class, 'showTentangKami'])->name('tentang-kami'); // Mengarah ke tentangKami.blade.php
+Route::get('/homepage-login', [PageController::class, 'showHomepageLogin'])->name('homepage-login'); // Mengarah ke homepageLogin.blade.php
+Route::get('/service', [PageController::class, 'showService'])->name('service'); // Mengarah ke homepageLogin.blade.php

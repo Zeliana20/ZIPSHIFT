@@ -12,10 +12,10 @@
             <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
-            <li><a href="/HTML/service.html">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
+            <li><a href="{{ route('homepage-login') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+             <li><a href=""></a>👤</li>
         </ul>
     </nav>
 
@@ -172,10 +172,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                    li><a href="/HTML/homepage.html">Home</a></li>
-                    <li><a href="/HTML/service.html">Layanan Kami</a></li>
-                    <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
-                    <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
+                    <li><a href="{{ route('homepage-login') }}">Home</a></li>
+                    <li><a href="{{ route('service') }}">Layanan Kami</a></li>
+                    <li><a href="{{ route('order-form') }}">Order Jasa</a></li>
+                    <li><a href="{{ route('homepage-login') }}#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>

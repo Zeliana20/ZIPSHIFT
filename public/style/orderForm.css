@@ -4,32 +4,36 @@
     box-sizing: border-box;
   } 
   
-  nav{
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #C1A57B;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     display: flex;
-    padding: 1 rem 5%;
+    padding: 1rem 5%;
     height: 80px;
-    padding-left: 7rem ;
+    padding-left: 7rem;
     padding-right: 7rem;
-    
+    width: 100%;
+    z-index: 1000; /* Menambahkan z-index untuk memastikan di atas */
   }
   
   html {
     scroll-behavior: smooth;
   }
   
-  
   nav ul {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 1,2rem;
+    width: fit-content;
   }
   
   nav div img {
-    width: 50px;
+    width: 50%;
   }
   
   nav ul li a {
@@ -48,12 +52,12 @@
     transform: scale(1.1);;
   }
   
-  
   body {
     font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
     color: black;
     min-height: 100vh; 
     background-color:#f4f4f4;
+    margin-top: 120px;
   }
   
   /* Progress Steps */

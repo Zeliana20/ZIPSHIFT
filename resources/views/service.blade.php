@@ -13,10 +13,10 @@
             <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul>
-            <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
-            <li><a href="/HTML/service.html">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
+            <li><a href="{{ route('homepage-login') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href=""></a>👤</li>
         </ul>
     </nav>
 
@@ -28,19 +28,19 @@
         <div class="cards">
             <div class="card-layanan">
                 <a>Packing</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
-
+  
             <div class="card-layanan">
                 <a>Delivery</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
-
+  
             <div class="card-layanan">
                 <a>Pack n Delivery</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
         </div>
@@ -66,7 +66,7 @@
                 <label for="catatan">Catatan Tambahan</label>
                 <input type="text" id="catatan" name="catatan">
                 <button type="submit">
-                    <a href="">Selanjutnya</a>
+                    <a href="{{ route('pembayaran') }}">Selanjutnya</a>
                 </button>
             </form>
         </section>
@@ -96,10 +96,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                    <li><a href="/HTML/homepage.html">Home</a></li>
-                    <li><a href="/HTML/service.html">Layanan Kami</a></li>
-                    <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
-                    <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
+                    <li><a href="{{ route('homepage-login') }}">Home</a></li>
+                    <li><a href="{{ route('service') }}">Layanan Kami</a></li>
+                    <li><a href="{{ route('order-form') }}">Order Jasa</a></li>
+                    <li><a href="{{ route('homepage-login') }}#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>

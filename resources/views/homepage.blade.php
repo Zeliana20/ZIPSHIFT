@@ -14,32 +14,32 @@
             <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul>
-            <li><a href="/HTML/homepage.html">Home</a></li>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
             <li><a href="#about">Tentang</a></li>
             <li><a href="#layanan">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
+            <li><a href="{{ route('login') }}">Login</a></li>
         </ul>
     </nav>
 
     <div class="homepage">
-        <img src="/gambarhomepage.png" alt="Homepage Image" class="homepage-image">
+        <img src="{{ asset('assets/gambarhomepage.png') }}" alt="Homepage Image" class="homepage-image">
         <a class="homepage-title">ZIPSHIFT</a>
     </div>
 
     <div class="floating-logo1">
-        <a href=" ">
-            <img src="/Desktop - Whatsapp Button.png" >
+        <a href="">
+            <img src="{{ asset('assets/Desktop - Whatsapp Button.png') }}" >
         </a>
     </div>
 
     <div class="floating-logo2">
         <a href="#">
-            <img src="/Desktop - Scroll Up Button.png">
+            <img src="{{ asset('assets/Desktop - Scroll Up Button.png') }}">
         </a>
     </div>
 
     <section id="about" class="about">
-        <img src="/wireframAU.png">
+        <img src="{{ asset('assets/wireframAU.png') }}">
         <a>Zipshift are  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet dolor. Curabitur aliquet fringilla odio, ac tincidunt lectus. Quisque nec cursus lectus, at sollicitudin orci. Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl sed elementum ullamcorper.Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl sed elementum ullamcorper.Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl.</a>
     </section>
 
@@ -51,27 +51,27 @@
         
         <section id="card" class="card">
             <div class ="set-card">
-                <img src="/ant-design_form-outlined.png">
+                <img src="{{ asset('assets/ant-design_form-outlined.png') }}">
                 <p>Pesan Survei</p>
             </div>
 
             <div class ="set-card">
-                <img src="/stash_pin-place.png">
+                <img src="{{ asset('assets/stash_pin-place.png') }}">
                 <p>Survei Offline</p>
             </div>
 
             <div class ="set-card">
-                <img src="/solar_notes-bold.png">
+                <img src="{{ asset('assets/solar_notes-bold.png') }}">
                 <p>Detail</p>
             </div>
 
             <div class ="set-card">
-                <img src="/solar_bill-check-bold.png">
+                <img src="{{ asset('assets/solar_bill-check-bold.png') }}">
                 <p>Konfirmasi</p>
             </div>
 
             <div class ="set-card">
-                <img src="/stash_pack.png">
+                <img src="{{ asset('assets/stash_pack.png') }}">
                 <p>Packing dan Pindah</p>
             </div>
         </section>
@@ -87,19 +87,19 @@
         <div class="cards">
             <div class="card-layanan">
                 <a>Packing</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
 
             <div class="card-layanan">
                 <a>Delivery</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
 
             <div class="card-layanan">
                 <a>Pack n Delivery</a>
-                <img src="/wireframeLK.png">
+                <img src="{{ asset('assets/wireframeLK.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat. Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
             </div>
         </div>
@@ -107,8 +107,8 @@
         <div class="button-container">
             <div class="button-layanan">
                 <button>
-                    <a href="/HTML/service.html">Pesan Kami Sekarang</a>
-                    <img src="/pesan.png" alt="Pesan">
+                    <a href="{{ route('login') }}">Pesan Kami Sekarang</a>
+                    <img src="{{ asset('assets/pesan.png') }}" alt="Pesan">
                 </button>
             </div>
         </div>
@@ -231,10 +231,10 @@
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
-                  <li><a href="/HTML/homepage.html">Home</a></li>
-                  <li><a href="/HTML/service.html">Layanan Kami</a></li>
-                  <li><a href="/HTML/orderForm.html">Order Jasa</a></li>
-                  <li><a href="/HTML/homepage.html#ulasan">Testimoni</a></li>
+                  <li><a href="{{ route('homepage') }}">Home</a></li>
+                  <li><a href="{{ route('service') }}">Layanan Kami</a></li>
+                  <li><a href="{{ route('login') }}">Order Jasa</a></li>
+                  <li><a href="{{ route('homepage') }}#ulasan">Testimoni</a></li>
                 </ul>
             </div>
         </div>

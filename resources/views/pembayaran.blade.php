@@ -18,10 +18,11 @@
             <img src="/logo sementara.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
-            <li><a href="/HTML/service.html">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
+            <li><a href="{{ route('homepage-login') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href=""></a>👤</li>
+        </ul>
         </ul>
     </nav>
 
@@ -48,7 +49,10 @@
                         <input type="file" id="upload-input" name="uploaded_file" accept="image/*">
                     </label>
                     <div class="buttons">
-                        <button type="submit">I alredy transfer</button>
+                        <a href="">
+                            <button type="submit">Saya sudah transfer</button>
+                        </a>
+                        
                     </div>
                 </form>
             </div>
