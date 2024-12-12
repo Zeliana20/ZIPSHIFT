@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Input Review</title>
-    <link rel="stylesheet" href="/CSS/inputReview.css">
+    <link rel="stylesheet" href="{{ asset('style/inputReview.css') }}">
 </head>
 <body>
     <nav>
@@ -20,11 +20,10 @@
     </ul>
     </nav>
     
-
     <section id="rate-us" class="rate-us-section">
+        <img src="{{ asset('assets/image 6.png') }}" alt="">
         <h1 class="rate-us-title">RATE US</h1>
         <div class="rate-us-container">
-            
             <div class="rate-us-content">
                 <form class="rate-us-form">
                     <label for="name">Nama</label>
@@ -41,12 +40,14 @@
     
                     <label for="review">Ulasan</label>
                     <textarea id="review" placeholder="Tulis ulasan Anda"></textarea>
-    
-                    <button type="submit" class="submit-btn">Submit</button>
+                    
+                    <a href="{{ route('homepage-login') }}">
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </a>
+                    
                 </form>
             </div>
         </div>
     </section>
-    
 </body>
 </html>

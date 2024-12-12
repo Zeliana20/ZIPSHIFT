@@ -60,4 +60,8 @@ class PageController extends Controller
         return view('service'); // Return the service view
     }
 
+    public function showinputReview()
+    {
+        return view('inputReview'); // Return the inputReview view
+    }
 }

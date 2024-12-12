@@ -45,7 +45,11 @@ Route::get('/homepage-login', function () {
 });
 
 Route::get('/service', function () {
-    return view('service'); // Mengarah ke login.blade.php
+    return view('service'); 
+});
+
+Route::get('/inputReview', function () {
+    return view('inputReview'); 
 });
 
 
@@ -58,3 +62,4 @@ Route::get('/signin', [PageController::class, 'showSignin'])->name('signin'); //
 Route::get('/tentang-kami', [PageController::class, 'showTentangKami'])->name('tentang-kami'); // Mengarah ke tentangKami.blade.php
 Route::get('/homepage-login', [PageController::class, 'showHomepageLogin'])->name('homepage-login'); // Mengarah ke homepageLogin.blade.php
 Route::get('/service', [PageController::class, 'showService'])->name('service'); // Mengarah ke homepageLogin.blade.php
+Route::get('/inputReview', [PageController::class, 'showinputReview'])->name('inputReview');
