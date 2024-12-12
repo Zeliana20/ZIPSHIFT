@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/homepage.css">
+    <link rel="stylesheet" href="{{asset('style/homepage.css')}}">
     <link href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>

@@ -1,0 +1,263 @@
+:root {
+    --dark-navy: #1D2433;
+    --medium-blue: #2D3B4E;
+    --beige: #C4B39D;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+    color: black;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #C1A57B;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 1 rem 5%;
+    height: 80px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1, 2rem;
+}
+
+nav div img {
+    width: 50px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 3px 0;
+    transition: all 300ms;
+}
+
+nav ul li a:hover {
+    color: brown;
+    transform: scale(1.1);
+    ;
+}
+
+/* Progress Steps */
+.judul {
+    color: #4D3526;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.bagian-progress {
+    text-align: center;
+    padding: 2rem 0;
+    background: white;
+    border: 1.5px solid #4D3526;
+    margin: 2rem 4rem 0;
+    padding-bottom: 0px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 5% 2rem;
+}
+
+.garis-progress {
+    position: absolute;
+    top: 37%;
+    left: 7%;
+    right: 7%;
+    bottom: 50%;
+    height: 4px;
+    background: #C1A57B;
+    z-index: 0;
+}
+
+.langkah {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.buletan {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    border: 1px solid #C1A57B;
+}
+
+.buletan.udah {
+    background-color: #2C3E50;
+}
+
+.buletan.aktif {
+    background-color: #C1A57B;
+    border: 2px solid #C1A57B;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.teks-progress {
+    font-size: 1.2rem;
+    color: 4B5563;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* buletan gede */
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.main-circle {
+    width: 200px;
+    height: 200px;
+    background: var(--beige);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.checkmark {
+    color: white;
+    font-size: 90px;
+}
+
+.blur-circle-1 {
+    width: 220px;
+    height: 220px;
+    background: var(--beige);
+    opacity: 0.3;
+    filter: blur(10px);
+    z-index: 2;
+}
+
+.blur-circle-2 {
+    width: 240px;
+    height: 240px;
+    background: var(--beige);
+    opacity: 0.2;
+    filter: blur(15px);
+    z-index: 1;
+}
+
+.blur-circle-3 {
+    width: 260px;
+    height: 260px;
+    background: var(--beige);
+    opacity: 0.1;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+
+/* Styling untuk kontainer deskripsi */
+.kontainer-deskripsi {
+    text-align: center;
+    margin: 2rem 4rem;
+    padding: 1rem;
+    background-color: var(--medium-blue);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.deskripsi {
+    padding: 1.5rem 1.5rem 0;
+    font-size: 1.2rem;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Kontainer tombol */
+.kontainer-tombol {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Tombol */
+.tombol {
+    padding: 1rem 9rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+}
+
+.tombol:hover {
+    opacity: 0.9;
+}
+
+.tombol.home {
+    background-color: var(--beige);
+    color: var(--dark-navy);
+    margin-right: 3rem;
+}
+
+.tombol.home:hover {
+    background-color: #8e7d68;
+}
+
+.tombol.review {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    margin-left: 3rem;
+}
+
+.tombol.review:hover {
+    background-color: #49597b;
+}

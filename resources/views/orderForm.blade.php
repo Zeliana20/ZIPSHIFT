@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Form</title>
-    <link rel="stylesheet" href="/CSS/orderForm.css">
+    <link rel="stylesheet" href="{{asset('style/orderForm.css')}}">
 </head>
 <body>
     <nav class="navbar">

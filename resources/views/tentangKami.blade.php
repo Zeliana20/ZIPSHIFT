@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami</title>
-    <link rel="stylesheet" href="/CSS/tentangKami.css">
+    <link rel="stylesheet" href="{{asset('style/tentangKami.css')}}">
     <link href="css/bootstrap.min.css">
 </head>
 <body>
