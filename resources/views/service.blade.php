@@ -81,7 +81,7 @@
 
                 <!-- Mengubah tombol menjadi submit -->
                 <button type="submit">
-                    <a href="{{ route('pembayaran') }}">Selanjutnya</a>
+                    <a href="{{ route('pembayaranSurvei') }}">Selanjutnya</a>
                 </button>
             </form>
 

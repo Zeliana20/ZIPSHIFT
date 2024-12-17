@@ -69,4 +69,14 @@ class PageController extends Controller
     {
         return view('upload');
     }
+
+    public function showpembayaranSurvei()
+    {
+        return view('pembayaranSurvei');
+    }
+
+    public function showdoneSurvey()
+    {
+        return view('doneSurvey');
+    }
 }

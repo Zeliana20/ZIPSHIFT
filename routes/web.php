@@ -92,6 +92,14 @@ Route::get('/done', function () {
     return view('done'); 
 })->name('done');
 
+Route::get('/pembayaranSurvei', function () {
+    return view('pembayaranSurvei'); 
+});
+
+Route::get('/doneSurvey', function () {
+    return view('doneSurvey'); 
+});
+
 Route::get('/', [PageController::class, 'showHomepage'])->name('homepage'); // Mengarah ke homepage.blade.php
 Route::get('/order-form', [PageController::class, 'showOrderForm'])->name('order-form'); // Mengarah ke orderForm.blade.php
 Route::get('/pembayaran', [PageController::class, 'showPembayaran'])->name('pembayaran'); // Mengarah ke pembayaran.blade.php
@@ -102,3 +110,5 @@ Route::get('/service', [PageController::class, 'showService'])->name('service');
 Route::get('/inputReview', [PageController::class, 'showinputReview'])->name('inputReview');
 Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])->name('store-booking');
 Route::post('/upload', [SurveyBookingController::class, 'storeBooking'])->name('upload');
+Route::post('/pembayaranSurvei', [SurveyBookingController::class, 'showpembayaranSurvei'])->name('pembayaranSurvei');
+Route::post('/doneSurvey', [SurveyBookingController::class, 'showdoneSurvey'])->name('doneSurvey');
