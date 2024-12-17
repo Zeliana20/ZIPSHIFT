@@ -37,6 +37,7 @@
     gap: 1,2rem;
     width: fit-content;
   }
+
   
   nav div img {
     width: 50%;
@@ -118,6 +119,7 @@
 
 .rate-us-form label {
     font-weight: bold;
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
 }
 
 .rate-us-form input,
@@ -127,22 +129,25 @@
     border-radius: 5px;
     font-size: 16px;
     color: #333;
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
 }
 
 .rate-us-form input:focus,
 .rate-us-form textarea:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
 }
 
 .rate-us-form textarea {
     height: 100px;
     resize: none;
+
 }
 
 .submit-btn {
     padding: 10px 20px;
-    background: #c9a56d; /* Warna tombol coklat emas */
+    background: #c9a56d; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -151,6 +156,75 @@
     transition: background 0.3s;
 }
 
+.submit-btn a{
+  text-decoration: none;
+  color: white;
+}
+
+.submit-btn a:hover{
+  color: #c9a56d;
+}
 .submit-btn:hover {
-    background: #b38f5b;
+  background-color: #3e3a3a;
+  color:#ffffff;
+}
+
+.footer{
+  background-color: #222831;
+  height: 335px;
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.footerz{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-section{
+  flex: 1;
+  min-width: 20px;
+
+}
+
+.footer-section h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #bfb2b2;
+  text-align: left;
+}
+
+.footer-section p{
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: white;
+  text-align: left;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+  color: bisque; 
 }

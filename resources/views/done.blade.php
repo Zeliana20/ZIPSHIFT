@@ -9,16 +9,23 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav>
         <div class="logo">
-            <img src="/logo sementara.png" alt="Logo">
+            <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
-        <ul class="nav-links">
-            <li><a href="/HTML/homepage.html">Home</a></li>
-            <li><a href="/HTML/homepage.html#about">Tentang</a></li>
-            <li><a href="/HTML/service.html">Layanan</a></li>
-            <li><a href="/HTML/login.html">Login</a></li>
-        </ul>
+        <ul>
+            <li><a href="{{ route('homepage-login') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="{{ route('service') }}">Layanan</a></li>
+            <li>
+              <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                  @csrf
+                  <button type="submit" style="background: none; border: none; cursor: pointer;">
+                      <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                  </button>
+              </form>
+            </li>
+          </ul>
     </nav>
 
     <section class="bagian-progress">
@@ -62,8 +69,8 @@
                 Anda.
             </p>
             <div class="kontainer-tombol">
-                <button class="tombol home" onclick="location.href='homepage.blade.php'">Home</button>
-                <button class="tombol review" onclick="location.href='review.blade.php'">Review</button>
+                <button class="tombol home" onclick="location.href='{{ route('homepage-login') }}'">Home</button>
+                <button class="tombol review" onclick="location.href='{{ route('inputReview') }}'">Review</button>                
             </div>
         </div>
 

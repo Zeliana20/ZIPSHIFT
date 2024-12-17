@@ -13,17 +13,23 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav>
         <div class="logo">
-            <img src="/logo sementara.png" alt="Logo">
+            <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
-        <ul class="nav-links">
+        <ul>
             <li><a href="{{ route('homepage-login') }}">Home</a></li>
             <li><a href="#about">Tentang</a></li>
-            <li><a href="#layanan">Layanan</a></li>
-            <li><a href=""></a>👤</li>
-        </ul>
-        </ul>
+            <li><a href="{{ route('service') }}">Layanan</a></li>
+            <li>
+              <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                  @csrf
+                  <button type="submit" style="background: none; border: none; cursor: pointer;">
+                      <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                  </button>
+              </form>
+            </li>
+          </ul>
     </nav>
 
     <main class="main-content">
@@ -31,7 +37,7 @@
             <div class="group">
                 <h3>Bank</h3>
                 <div class="bagian-bank">
-                    <img src="/resources/views/asset/bank.png" alt="logoBank">
+                    <img src="{{ asset('assets/bank.png') }}" alt="logoBank">
                     <h4>Bank Central Asia</h4>
                 </div>
             </div>
@@ -43,16 +49,16 @@
             </div>
             <div class="group">
                 <h3>Bukti Pembayaran</h3>
-                <form action="/resources/views/upload.blade.php" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
+                    @csrf 
                     <label class="upload-box" for="upload-input">
                         <span id="upload-text">Upload here</span>
-                        <input type="file" id="upload-input" name="uploaded_file" accept="image/*">
+                        <input type="file" id="upload-input" name="uploaded_file" accept="image/*" required>
                     </label>
                     <div class="buttons">
-                        <a href="">
-                            <button type="submit">Saya sudah transfer</button>
-                        </a>
-                        
+                        <button type="submit">
+                            <a href="{{ route('done') }}">Saya sudah transfer</a>
+                        </button>
                     </div>
                 </form>
             </div>

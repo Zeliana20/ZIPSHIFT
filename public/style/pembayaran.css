@@ -178,6 +178,15 @@ nav {
     margin-top: 70px;
 }
 
+.buttons a{
+    text-decoration: none;
+    color: #4D3526;
+}
+
+.buttons a:hover{
+    color: #C1A57B;
+}
+
 .buttons button {
     text-align: center;
     padding: 1rem 4.5rem;

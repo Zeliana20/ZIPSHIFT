@@ -64,10 +64,6 @@ Route::get('/pembayaran', function () {
     return view('pembayaran'); // Mengarah ke pembayaran.blade.php
 });
 
-// Halaman Selesai
-Route::get('/done', function () {
-    return view('done'); // Mengarah ke done.blade.php
-});
 
 // Halaman Tentang Kami
 Route::get('/tentang-kami', function () {
@@ -82,6 +78,19 @@ Route::get('/inputReview', function () {
     return view('inputReview'); 
 });
 
+Route::post('/upload', function () {
+    if (request()->hasFile('uploaded_file')) {
+        $file = request()->file('uploaded_file'); 
+        $fileName = time() . '_' . $file->getClientOriginalName(); 
+        $file->move(public_path('uploads'), $fileName); 
+    }
+
+    return redirect()->route('done'); 
+})->name('upload');
+
+Route::get('/done', function () {
+    return view('done'); 
+})->name('done');
 
 Route::get('/', [PageController::class, 'showHomepage'])->name('homepage'); // Mengarah ke homepage.blade.php
 Route::get('/order-form', [PageController::class, 'showOrderForm'])->name('order-form'); // Mengarah ke orderForm.blade.php
@@ -92,3 +101,4 @@ Route::get('/homepage-login', [PageController::class, 'showHomepageLogin'])->nam
 Route::get('/service', [PageController::class, 'showService'])->name('service'); // Mengarah ke homepageLogin.blade.php
 Route::get('/inputReview', [PageController::class, 'showinputReview'])->name('inputReview');
 Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])->name('store-booking');
+Route::post('/upload', [SurveyBookingController::class, 'storeBooking'])->name('upload');

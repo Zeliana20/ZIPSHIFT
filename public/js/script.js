@@ -27,7 +27,7 @@ function calculatePrice(form) {
 }
 
 function navigateToPayment() {
-    window.location.href = 'pembayaran.html'; // Ganti dengan URL halaman pembayaran
+    window.location.href = "{{ route('pembayaran') }}"; // Ganti dengan URL halaman pembayaran
 }
 
 // Bagian Pembayaran

@@ -64,4 +64,9 @@ class PageController extends Controller
     {
         return view('inputReview'); // Return the inputReview view
     }
+
+    public function showUpload()
+    {
+        return view('upload');
+    }
 }

@@ -10,15 +10,23 @@
 <body>
     <nav>
         <div class="logo">
-        <img src="/logo sementara.png" alt="Logo">
-    </div>
-    <ul>
-        <li><a href="/HTML/homepage.html">Home</a></li>
-        <li><a href="/">Tentang</a></li>
-        <li><a href="#layanan">Layanan</a></li>
-        <li><a href=""></a>👤</li>
-    </ul>
-    </nav>
+          <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
+        </div>
+    
+        <ul>
+          <li><a href="{{ route('homepage-login') }}">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="{{ route('service') }}">Layanan</a></li>
+          <li>
+            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                @csrf
+                <button type="submit" style="background: none; border: none; cursor: pointer;">
+                    <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                </button>
+            </form>
+          </li>
+        </ul>
+      </nav>
     
     <section id="rate-us" class="rate-us-section">
         <img src="{{ asset('assets/image 6.png') }}" alt="">
@@ -41,13 +49,46 @@
                     <label for="review">Ulasan</label>
                     <textarea id="review" placeholder="Tulis ulasan Anda"></textarea>
                     
-                    <a href="{{ route('homepage-login') }}">
-                        <button type="submit" class="submit-btn">Submit</button>
-                    </a>
+                    <button type="submit" class="submit-btn">
+                        <a href="{{ route('homepage-login') }}" class="submit-btn">Submit</a>
+                    </button>
                     
                 </form>
             </div>
         </div>
     </section>
+    <section id="footer" class="footer">
+    <div class="footerz">
+      <div class="footer-section">
+        <img src="{{ asset('assets/gambar footer.png') }}">
+      </div>
+      <div class="footer-section">
+        <h3>Tentang Kami</h3>
+        <p>
+          <strong>ZIPSHIFT</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet dolor.
+          Curabitur aliquet fringilla odio, ac tincidunt lectus. Quisque nec cursus lectus, at sollicitudin orci. Morbi
+          sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl sed elementum ullamcorper.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Alamat Kantor</h3>
+        <p><strong>MALANG</strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p><strong>JAM OPERASIONAL</strong></p>
+        <p><strong>Senin s.d Minggu</strong><br>00.00 - 00.00</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Site Map</h3>
+        <ul>
+          <li><a href="{{ route('homepage-login') }}">Home</a></li>
+          <li><a href="{{ route('service') }}">Layanan Kami</a></li>
+          <li><a href="{{ route('order-form') }}">Order Jasa</a></li>
+          <li><a href="{{ route('homepage-login') }}#ulasan">Testimoni</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

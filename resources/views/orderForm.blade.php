@@ -7,17 +7,25 @@
     <link rel="stylesheet" href="{{asset('style/orderForm.css')}}">
 </head>
 <body>
-    <nav class="navbar">
+    <nav>
         <div class="logo">
-            <img src="/logo sementara.png" alt="Logo">
+          <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
-        <ul class="nav-links">
-            <li><a href="{{ route('homepage-login') }}">Home</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#layanan">Layanan</a></li>
-             <li><a href=""></a>👤</li>
+    
+        <ul>
+          <li><a href="{{ route('homepage-login') }}">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="{{ route('service') }}">Layanan</a></li>
+          <li>
+            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                @csrf
+                <button type="submit" style="background: none; border: none; cursor: pointer;">
+                    <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                </button>
+            </form>
+          </li>
         </ul>
-    </nav>
+      </nav>
 
     <section class="bagian-progress">
         <!-- progress pemesanan -->
@@ -152,7 +160,7 @@
     <section id="footer" class="footer">
         <div class="footerz">
             <div class="footer-section">
-                <img src="/">
+                <img src="{{ asset('assets/gambar footer.png') }}">
             </div>
             <div class="footer-section">
                 <h3>Tentang Kami</h3>

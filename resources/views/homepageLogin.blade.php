@@ -13,24 +13,22 @@
 <body>
   <nav>
     <div class="logo">
-      <img src="/logo sementara.png" alt="Logo">
+      <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
     </div>
+
     <ul>
-    <li class="dropdown">
-    👤
-    <ul class="dropdown-menu">
-        <li><a href="{{ route('profile') }}">Profil</a></li> <!-- Opsional: Link ke profil -->
-        <li>
-            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                @csrf
-                <button type="submit" style="border: none; background: none; color: inherit; cursor: pointer; padding: 0; font: inherit;">
-                    Logout
-                </button>
-            </form>
-        </li>
+      <li><a href="{{ route('homepage-login') }}">Home</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li>
+        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+            @csrf
+            <button type="submit" style="background: none; border: none; cursor: pointer;">
+                <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+            </button>
+        </form>
+      </li>
     </ul>
-</li>
- </ul>
   </nav>
 
   <div class="homepage">
@@ -51,13 +49,11 @@
   </div>
 
   <section id="about" class="about">
-    <img src="{{ asset('assets/wireframAU.png') }}">
-    <a>Zipshift are Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet dolor. Curabitur aliquet
-      fringilla odio, ac tincidunt lectus. Quisque nec cursus lectus, at sollicitudin orci. Morbi sollicitudin malesuada
-      ipsum dictum mollis. Aliquam feugiat nisl sed elementum ullamcorper.Morbi sollicitudin malesuada ipsum dictum
-      mollis. Aliquam feugiat nisl sed elementum ullamcorper.Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam
-      feugiat nisl.</a>
-  </section>
+    <img src="{{ asset('assets/logo about us.png') }}">
+    <a>ZIPSHIFT adalah layanan profesional yang hadir untuk memudahkan proses pindahan Anda. Kami percaya bahwa setiap perpindahan adalah langkah penting, dan kami siap membantu Anda melaluinya dengan lancar dan aman. Dengan tim ahli yang terlatih, ZIPSHIFT memastikan barang-barang Anda dikemas rapi, dipindahkan dengan teliti, dan tiba di tujuan tepat waktu.
+      Fokus kami adalah memberikan pelayanan cepat, efisien, dan bebas stres. Baik pindahan rumah, kos, maupun kantor, ZIPSHIFT selalu siap mendukung Anda dengan solusi pindahan yang terpercaya dan berkualitas.
+      Percayakan setiap langkah pindahan Anda bersama kami, karena ZIPSHIFT siap membawa Anda ke tempat baru dengan penuh kenyamanan!</a>
+</section>
 
 
   <section id="set" class="set">
@@ -103,29 +99,20 @@
     <div class="cards">
       <div class="card-layanan">
         <a>Packing</a>
-        <img src="{{ asset('assets/wireframeLK.png') }}">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat.
-          Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas
-          vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque
-          sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
+        <img src="{{ asset('assets/pack.png') }}">
+        <p>ZIPSHIFT hadir untuk membantu Anda dalam proses packing barang. Kami memastikan setiap item dikemas secara aman dan rapi, menggunakan material berkualitas tinggi. Dengan tim berpengalaman, barang-barang Anda terlindungi dari risiko kerusakan. Kami memahami pentingnya keamanan barang Anda dan selalu berusaha memberikan pelayanan terbaik demi kepuasan pelanggan.</p>
       </div>
 
       <div class="card-layanan">
-        <a>Delivery</a>
-        <img src="{{ asset('assets/wireframeLK.png') }}">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat.
-          Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas
-          vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque
-          sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
+        <a>move</a>
+        <img src="{{ asset('assets/delivery.png') }}">
+        <p>Layanan move kami dirancang khusus untuk membantu proses pemindahan barang dari satu tempat ke tempat lain. Tim profesional ZIPSHIFT bekerja secara cepat dan terorganisir. Dengan peralatan dan transportasi yang tepat, kami memastikan barang tiba tepat waktu dan dalam kondisi yang prima. Kenyamanan pelanggan adalah prioritas kami, sehingga Anda tidak perlu khawatir lagi.</p>
       </div>
 
       <div class="card-layanan">
-        <a>Pack n Delivery</a>
-        <img src="{{ asset('assets/wireframeLK.png') }}">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet laoreet magna eget consequat.
-          Vestibulum posuere fermentum mattis. Mauris odio augue, tempor non metus eget, mollis auctor augue. Maecenas
-          vel faucibus ante, at consequat sapien. Pellentesque non nisi mattis ligula dignissim convallis. Quisque
-          sagittis euismod auctor. Aliquam viverra eros quis tortor euismod, at aliquam sapien posuere. </p>
+        <a>Pack n move</a>
+        <img src="{{ asset('assets/pack n move.png') }}">
+        <p>Layanan pack dan deivery dari ZIPSHIFT memberikan solusi lengkap untuk kebutuhan pindahan Anda. Kami menangani semua tahapan, mulai dari packing barang hingga proses pemindahan ke lokasi tujuan. Dengan layanan ini, Anda bisa fokus pada langkah baru Anda tanpa perlu repot. Kami berkomitmen memberikan pengalaman pindahan yang mudah, cepat, dan bebas stres untuk setiap pelanggan.</p>
       </div>
     </div>
 
@@ -241,7 +228,7 @@
   <section id="footer" class="footer">
     <div class="footerz">
       <div class="footer-section">
-        <img src="/">
+        <img src="{{ asset('assets/gambar footer.png') }}">
       </div>
       <div class="footer-section">
         <h3>Tentang Kami</h3>
@@ -270,9 +257,6 @@
         </ul>
       </div>
     </div>
-
-
-
   </section>
 </body>
 
