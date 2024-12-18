@@ -115,3 +115,10 @@ Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])-
 Route::post('/upload', [SurveyBookingController::class, 'storeBooking'])->name('upload');
 Route::post('/pembayaranSurvei', [SurveyBookingController::class, 'showpembayaranSurvei'])->name('pembayaranSurvei');
 Route::post('/doneSurvey', [SurveyBookingController::class, 'showdoneSurvey'])->name('doneSurvey');
+
+Route::get('/book_layanan', [BookLayananController::class, 'index']); 
+Route::get('/book_layanan/create', [BookLayananController::class, 'create']);  
+Route::post('/book_layanan/save', [BookLayananController::class, 'store']); 
+Route::get('/book_layanan/{id}/edit', [BookLayananController::class, 'edit']);
+Route::put('/book_layanan/{id}', [BookLayananController::class, 'update']); 
+Route::delete('/book_layanan', [BookLayananController::class, 'destroy']);

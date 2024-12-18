@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class BookLayanan extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'book_layanan';
     protected $primaryKey = 'ID_BookLayanan';
@@ -16,8 +17,12 @@ class BookLayanan extends Model
         'nama',
         'noTelp',
         'Alamat',
+        'AlamatTujuan',
+        'Jarak',
         'DaftarBarang',
+        'BeratBarang',
         'Tanggal',
+        'JenisLayanan',
         'KisaranHarga',
     ];
 }
