@@ -56,6 +56,7 @@
                         <input type="file" id="upload-input" name="uploaded_file" accept="image/*" required>
                     </label>
                     <div class="buttons">
+                    <form action="{{ route('done') }}" method="POST" enctype="multipart/form-data">
                         <button type="submit">
                             <a href="{{ route('done') }}">Saya sudah transfer</a>
                         </button>

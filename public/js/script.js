@@ -42,3 +42,18 @@ inputFile.addEventListener("change", () => {
         uploadText.textContent = "Upload here";
     }
 });
+
+function showForm(serviceType) {
+    // Tampilkan formulir
+    const formSection = document.getElementById('packingPindahan');
+    formSection.hidden = false;
+
+    // Atur jenis layanan yang dipilih di dropdown
+    const serviceSelect = document.getElementById('jenislayanan');
+    if (serviceSelect) {
+        serviceSelect.value = serviceType;
+    }
+
+    // Scroll ke formulir
+    formSection.scrollIntoView({ behavior: 'smooth' });
+}

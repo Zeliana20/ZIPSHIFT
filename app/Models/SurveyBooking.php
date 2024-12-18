@@ -11,7 +11,6 @@ class SurveyBooking extends Model
 
     protected $table = 'survey_bookings';
 
-
     protected $fillable = [
         'nama',
         'nomor_telepon',

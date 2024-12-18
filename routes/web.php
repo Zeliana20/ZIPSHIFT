@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\SurveyBookingController;
+use App\Http\Controllers\BookLayananController;
+use App\Http\Controllers\BayarLayananController;
 
 
 // Halaman utama (sebelum login)
@@ -99,6 +101,7 @@ Route::get('/pembayaranSurvei', function () {
 Route::get('/doneSurvey', function () {
     return view('doneSurvey'); 
 });
+
 
 Route::get('/', [PageController::class, 'showHomepage'])->name('homepage'); // Mengarah ke homepage.blade.php
 Route::get('/order-form', [PageController::class, 'showOrderForm'])->name('order-form'); // Mengarah ke orderForm.blade.php

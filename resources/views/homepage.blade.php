@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{asset('style/homepage.css')}}">
     <link href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <nav>
