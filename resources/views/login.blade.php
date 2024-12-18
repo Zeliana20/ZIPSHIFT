@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav>
         <div class="logo">
-            <img src="/logo sementara.png" alt="Logo">
+            <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
         <ul>
             <li><a href="{{ route('homepage') }}">Home</a></li>

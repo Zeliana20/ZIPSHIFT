@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{asset('style/homepageLogin.css')}}">
   <link href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -128,101 +129,169 @@
   </section>
   </section>
 
-  <section id="ulasan" class="ulasan">
-    <h1>Ulasan Kami</h1>
-    <div class="reviews-container">
-      <div class="review-card">
-        <div class="review-header">
-          <div class="profile-pic"></div>
-          <div class="profile-info">
-            <h2>Name</h2>
-            <p>service name</p>
+  <section class="review" id="review">
+
+    <div class="swiper mySwiper container">
+      <h1 style="font-size: xx-large; color:black; text-align: center;">ULASAN KAMI</h1>
+      <div class="swiper-wrapper content">
+
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Noor Azizah Zeliana P</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
           </div>
         </div>
-        <div class="review-details">
-          <p><span>Date</span> | <span>Rate</span></p>
-        </div>
-        <div class="review-content">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id faucibus quam, iaculis feugiat
-            ante.”</p>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="profile-pic"></div>
-          <div class="profile-info">
-            <h2>Name</h2>
-            <p>service name</p>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Abhista Tabina Waranggani</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
           </div>
         </div>
-        <div class="review-details">
-          <p><span>Date</span> | <span>Rate</span></p>
-        </div>
-        <div class="review-content">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id faucibus quam, iaculis feugiat
-            ante.”</p>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="profile-pic"></div>
-          <div class="profile-info">
-            <h2>Name</h2>
-            <p>service name</p>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Nikita Tsalis</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
           </div>
         </div>
-        <div class="review-details">
-          <p><span>Date</span> | <span>Rate</span></p>
-        </div>
-        <div class="review-content">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id faucibus quam, iaculis feugiat
-            ante.”</p>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="profile-pic"></div>
-          <div class="profile-info">
-            <h2>Name</h2>
-            <p>service name</p>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Stephanie Xia</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
           </div>
         </div>
-        <div class="review-details">
-          <p><span>Date</span> | <span>Rate</span></p>
-        </div>
-        <div class="review-content">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id faucibus quam, iaculis feugiat
-            ante.”</p>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <div class="profile-pic"></div>
-          <div class="profile-info">
-            <h2>Name</h2>
-            <p>service name</p>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Jordan Tapp</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
           </div>
         </div>
-        <div class="review-details">
-          <p><span>Date</span> | <span>Rate</span></p>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="{{ asset('assets/pfp.png') }}" alt="">
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Caroline Parker</span>
+              <span class="profession">layanan</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="quote">
+              <p>"Janganlah kamu merasa sendirian. Good job!" </p>
+            </div>
+          </div>
         </div>
-        <div class="review-content">
-          <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id faucibus quam, iaculis feugiat
-            ante.”</p>
-        </div>
+
+
       </div>
-    </div>
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
     </div>
 
-    <!-- Linking SwiperJS script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Linking custom script -->
-    <script src="script.js"></script>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="{{ asset('js/carousel.js') }}"></script>
 
 
   <section id="footer" class="footer">

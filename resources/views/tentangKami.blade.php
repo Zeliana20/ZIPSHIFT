@@ -10,7 +10,7 @@
 <body>
     <nav>
         <div class="logo">
-            <img src="/logo sementara.png" alt="Logo">
+            <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
         <ul>
             <li><a href="/HTML/homepage.html">Home</a></li>

@@ -211,6 +211,19 @@
     margin-bottom: -0.5rem;
     text-align: left;
   }
+
+  .form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1.4px solid #8B7355;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 1rem;
+    color: #4D3526;
+    font-weight: 200;
+    font-family: 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+}
+
   
   .form input,
   .form textarea {
