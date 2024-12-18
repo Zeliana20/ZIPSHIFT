@@ -9,11 +9,15 @@ return new class extends Migration {
     {
         Schema::create('book_layanan', function (Blueprint $table) {
             $table->id('ID_BookLayanan');
-            $table->string('nama', 50);
-            $table->bigInteger('noTelp'); // Menggunakan bigInteger untuk nomor telepon
-            $table->string('Alamat', 100);
+            $table->string('nama', 255);
+            $table->bigInteger('noTelp');
+            $table->string('Alamat', 255);
+            $table->string('AlamatTujuan', 255)->nullable();
+            $table->float('Jarak')->nullable();
             $table->string('DaftarBarang', 250);
+            $table->float('BeratBarang')->nullable();
             $table->date('Tanggal');
+            $table->enum('JenisLayanan', ['Express', 'Regular'])->nullable();
             $table->integer('KisaranHarga');
             $table->timestamps();
         });
