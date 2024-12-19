@@ -9,6 +9,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SurveyBookingController;
 use App\Http\Controllers\BookLayananController;
 use App\Http\Controllers\BayarLayananController;
+use App\Http\Controllers\ReviewController;
+
 
 
 // Halaman utama (sebelum login)
@@ -66,6 +68,16 @@ Route::get('/pembayaran', function () {
     return view('pembayaran'); // Mengarah ke pembayaran.blade.php
 });
 
+// Menampilkan form review
+Route::get('/review', [ReviewController::class, 'create'])->name('review.create');
+
+// Menyimpan review
+Route::post('/submit-review', [ReviewController::class, 'store'])->name('submit-review');
+
+// Setelah submit, arahkan ke route after-review
+Route::get('/after-review', function () {
+    return redirect()->route('homepage-login');
+})->name('after-review');
 
 // Halaman Tentang Kami
 Route::get('/tentang-kami', function () {

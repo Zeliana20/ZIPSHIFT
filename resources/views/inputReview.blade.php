@@ -33,26 +33,24 @@
         <h1 class="rate-us-title">RATE US</h1>
         <div class="rate-us-container">
             <div class="rate-us-content">
-                <form class="rate-us-form">
+            <form action="{{ route('submit-review') }}" method="POST" class="rate-us-form">
+                    @csrf
                     <label for="name">Nama</label>
-                    <input type="text" id="name" placeholder="Masukkan nama Anda">
-    
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
                     <label for="service">Nama Service</label>
-                    <input type="text" id="service" placeholder="Masukkan nama service">
-    
+                    <input type="text" id="service" name="service_name" placeholder="Masukkan nama service" required>
+
                     <label for="date">Tanggal</label>
-                    <input type="date" id="date">
-    
+                    <input type="date" id="date" name="review_date" required>
+
                     <label for="rating">Rating</label>
-                    <input type="number" id="rating" placeholder="Masukkan rating" min="1" max="5">
-    
+                    <input type="number" id="rating" name="rating" placeholder="Masukkan rating" min="1" max="5" required>
+
                     <label for="review">Ulasan</label>
-                    <textarea id="review" placeholder="Tulis ulasan Anda"></textarea>
-                    
-                    <button type="submit" class="submit-btn">
-                        <a href="{{ route('homepage-login') }}" class="submit-btn">Submit</a>
-                    </button>
-                    
+                    <textarea id="review" name="review" placeholder="Tulis ulasan Anda" required></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
         </div>

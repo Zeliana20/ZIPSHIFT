@@ -159,7 +159,7 @@
             </div>
 
             <div class="name-profession">
-              <span class="name">Abhista Tabina Waranggani</span>
+              <span class="name">Abhista Tabina W</span>
               <span class="profession">layanan</span>
             </div>
 
