@@ -8,22 +8,17 @@ use Illuminate\Http\Request;
 class BayarLayananController extends Controller
 {
     // Menampilkan form pembayaran
-    public function showForm()
+    public function showForm(Request $request)
     {
-        return view('bayar_layanan'); // Halaman form pembayaran layanan
+        $kisaranHarga = $request->query('kisaranHarga');
+        return view('pembayaran', compact('kisaranHarga')); // Halaman form pembayaran layanan
     }
 
     // Menyimpan data pembayaran
     public function storePayment(Request $request)
     {
-        // Validasi data
-        $request->validate([
-            'BuktiPembayaran' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
-            'totalHarga' => 'required|numeric',
-        ]);
-
         // Menyimpan file pembayaran
-        $path = $request->file('BuktiPembayaran')->store('bukti_pembayaran', 'public');
+        $path = $request->file('BuktiPembayaran')->store('uploads', 'public');
 
         // Menyimpan data pembayaran ke database
         $bayarLayanan = BayarLayanan::create([

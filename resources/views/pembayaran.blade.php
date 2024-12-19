@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
-    <link rel="stylesheet" href="{{asset('style/pembayaran.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/pembayaran.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -22,14 +22,14 @@
             <li><a href="#about">Tentang</a></li>
             <li><a href="{{ route('service') }}">Layanan</a></li>
             <li>
-              <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                  @csrf
-                  <button type="submit" style="background: none; border: none; cursor: pointer;">
-                      <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
-                  </button>
-              </form>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background: none; border: none; cursor: pointer;">
+                        <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                    </button>
+                </form>
             </li>
-          </ul>
+        </ul>
     </nav>
 
     <main class="main-content">
@@ -49,16 +49,16 @@
             </div>
             <div class="group">
                 <h3>Bukti Pembayaran</h3>
-                <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
-                    @csrf 
+                <form action="{{ route('bayar-layanan.storePayment') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" value="{{ $kisaranHarga }}" name="totalHarga">
                     <label class="upload-box" for="upload-input">
                         <span id="upload-text">Upload here</span>
-                        <input type="file" id="upload-input" name="uploaded_file" accept="image/*" required>
+                        <input type="file" id="upload-input" name="BuktiPembayaran" accept="image/*" required>
                     </label>
                     <div class="buttons">
-                    <form action="{{ route('done') }}" method="POST" enctype="multipart/form-data">
                         <button type="submit">
-                            <a href="{{ route('done') }}">Saya sudah transfer</a>
+                            Saya sudah transfer
                         </button>
                     </div>
                 </form>
@@ -69,7 +69,7 @@
         <section class="kanan">
             <h3>Total Tagihan</h3>
             <div class="order">
-                <span class="pembayaran">Rp. 000.000.</span>
+                <span class="pembayaran">Rp. {{ $kisaranHarga }}</span>
                 <hr>
                 <div class="details">
                     <h4>Rincian Pesanan</h4>
@@ -98,7 +98,7 @@
             </div>
         </section>
     </main>
-    <script src="{{asset('js/script.js')}}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>

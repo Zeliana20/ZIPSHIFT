@@ -1,3 +1,4 @@
+kayaknya di bagian route, samain sama ini:
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -10,7 +11,6 @@ use App\Http\Controllers\SurveyBookingController;
 use App\Http\Controllers\BookLayananController;
 use App\Http\Controllers\BayarLayananController;
 use App\Http\Controllers\ReviewController;
-
 
 
 // Halaman utama (sebelum login)
@@ -68,6 +68,42 @@ Route::get('/pembayaran', function () {
     return view('pembayaran'); // Mengarah ke pembayaran.blade.php
 });
 
+
+// Halaman Tentang Kami
+Route::get('/tentang-kami', function () {
+    return view('tentangKami'); // Mengarah ke tentangKami.blade.php
+});
+
+Route::get('/service', function () {
+    return view('service');
+});
+
+Route::get('/inputReview', function () {
+    return view('inputReview');
+});
+
+Route::post('/upload', function () {
+    if (request()->hasFile('uploaded_file')) {
+        $file = request()->file('uploaded_file');
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        $file->move(public_path('uploads'), $fileName);
+    }
+
+    return redirect()->route('done');
+})->name('upload');
+
+Route::get('/done', function () {
+    return view('done');
+})->name('done');
+
+Route::get('/pembayaranSurvei', function () {
+    return view('pembayaranSurvei');
+});
+
+Route::get('/doneSurvey', function () {
+    return view('doneSurvey');
+});
+
 // Menampilkan form review
 Route::get('/review', [ReviewController::class, 'create'])->name('review.create');
 
@@ -79,58 +115,18 @@ Route::get('/after-review', function () {
     return redirect()->route('homepage-login');
 })->name('after-review');
 
-// Halaman Tentang Kami
-Route::get('/tentang-kami', function () {
-    return view('tentangKami'); // Mengarah ke tentangKami.blade.php
-});
-
-Route::get('/service', function () {
-    return view('service'); 
-});
-
-Route::get('/inputReview', function () {
-    return view('inputReview'); 
-});
-
-Route::post('/upload', function () {
-    if (request()->hasFile('uploaded_file')) {
-        $file = request()->file('uploaded_file'); 
-        $fileName = time() . '_' . $file->getClientOriginalName(); 
-        $file->move(public_path('uploads'), $fileName); 
-    }
-
-    return redirect()->route('done'); 
-})->name('upload');
-
-Route::get('/done', function () {
-    return view('done'); 
-})->name('done');
-
-Route::get('/pembayaranSurvei', function () {
-    return view('pembayaranSurvei'); 
-});
-
-Route::get('/doneSurvey', function () {
-    return view('doneSurvey'); 
-});
-
-
 Route::get('/', [PageController::class, 'showHomepage'])->name('homepage'); // Mengarah ke homepage.blade.php
 Route::get('/order-form', [PageController::class, 'showOrderForm'])->name('order-form'); // Mengarah ke orderForm.blade.php
-Route::get('/pembayaran', [PageController::class, 'showPembayaran'])->name('pembayaran'); // Mengarah ke pembayaran.blade.php
+// Route::get('/pembayaran', [PageController::class, 'showPembayaran'])->name('pembayaran'); // Mengarah ke pembayaran.blade.php
+Route::get('/pembayaran', [BayarLayananController::class, 'showForm'])->name('pembayaran'); // Mengarah ke pembayaran.blade.php
 Route::get('/done', [PageController::class, 'showDone'])->name('done'); // Mengarah ke done.blade.php
 Route::get('/tentang-kami', [PageController::class, 'showTentangKami'])->name('tentang-kami'); // Mengarah ke tentangKami.blade.php
 Route::get('/homepage-login', [PageController::class, 'showHomepageLogin'])->name('homepage-login'); // Mengarah ke homepageLogin.blade.php
 Route::get('/service', [PageController::class, 'showService'])->name('service'); // Mengarah ke homepageLogin.blade.php
 Route::get('/inputReview', [PageController::class, 'showinputReview'])->name('inputReview');
-Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])->name('store-booking');
+Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])->name('store-booking.storeBooking');
 Route::post('/upload', [SurveyBookingController::class, 'storeBooking'])->name('upload');
 Route::post('/pembayaranSurvei', [SurveyBookingController::class, 'showpembayaranSurvei'])->name('pembayaranSurvei');
 Route::post('/doneSurvey', [SurveyBookingController::class, 'showdoneSurvey'])->name('doneSurvey');
-
-Route::get('/book_layanan', [BookLayananController::class, 'index']); 
-Route::get('/book_layanan/create', [BookLayananController::class, 'create']);  
-Route::post('/book_layanan/save', [BookLayananController::class, 'store']); 
-Route::get('/book_layanan/{id}/edit', [BookLayananController::class, 'edit']);
-Route::put('/book_layanan/{id}', [BookLayananController::class, 'update']); 
-Route::delete('/book_layanan', [BookLayananController::class, 'destroy']);
+Route::post('/book-layanan', [BookLayananController::class, 'storeBooking'])->name('book-layanan.storeBooking');
+Route::post('/bayar-layanan', [BayarLayananController::class, 'storePayment'])->name('bayar-layanan.storePayment');

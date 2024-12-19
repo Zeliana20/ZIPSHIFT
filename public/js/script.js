@@ -12,17 +12,19 @@ function resetForm() {
 }
 
 function calculatePrice(form) {
-    const weightInput = form.querySelector('input[type="number"]');
+    const weightInput = form.querySelector('.weight');
+    const priceHidden = form.querySelector('.priceHidden');
     const priceSpan = form.querySelector('.price span');
 
     if (weightInput) {
-        const weight = parseFloat(weightInput.value) || 0;
+        const weight = parseFloat(weightInput.value ?? 0);
         const basePrice = 10000;
         const calculatedPrice = weight * basePrice;
         priceSpan.textContent = new Intl.NumberFormat('id-ID', {
             style: 'currency',
             currency: 'IDR'
         }).format(calculatedPrice);
+        priceHidden.value = calculatedPrice;
     }
 }
 

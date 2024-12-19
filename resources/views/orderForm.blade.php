@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Form</title>
-    <link rel="stylesheet" href="{{asset('style/orderForm.css')}}">
+    <link rel="stylesheet" href="{{ asset('style/orderForm.css') }}">
 </head>
+
 <body>
     <nav>
         <div class="logo">
-          <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
+            <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
-    
+
         <ul>
-          <li><a href="{{ route('homepage-login') }}">Home</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="{{ route('service') }}">Layanan</a></li>
-          <li>
-            <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                @csrf
-                <button type="submit" style="background: none; border: none; cursor: pointer;">
-                    <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
-                </button>
-            </form>
-          </li>
+            <li><a href="{{ route('homepage-login') }}">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="{{ route('service') }}">Layanan</a></li>
+            <li>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background: none; border: none; cursor: pointer;">
+                        <img src="{{ asset('assets/logout.png') }}" alt="logout" style="width: 24px; height: 24px;">
+                    </button>
+                </form>
+            </li>
         </ul>
-      </nav>
+    </nav>
 
     <section class="bagian-progress">
         <!-- progress pemesanan -->
@@ -51,8 +53,8 @@
         </div>
     </section>
 
-        <!-- Form Booking Layanan -->
-        <main class="main-container">
+    <!-- Form Booking Layanan -->
+    <main class="main-container">
         <!-- pilihan layanan -->
         <section class="layanan">
             <h2 class="subtitle">Pilih Layanan</h2>
@@ -75,42 +77,42 @@
         <!-- Form Booking Layanan -->
         <section class="form-packing" id="packingPindahan" hidden>
             <h3>Form Pemesanan</h3>
-            <form class="form" oninput="calculatePrice(this)">
+            <form class="form" oninput="calculatePrice(this)" method="POST"
+                action="{{ route('book-layanan.storeBooking') }}">
+                @csrf
                 <label for="">Nama Lengkap</label>
-                <input type="text" placeholder="Nama Lengkap">
+                <input type="text" name="nama" placeholder="Nama Lengkap">
                 <label for="">Nomor Telepon</label>
-                <input type="tel" placeholder="Nomor Telepon">
+                <input type="text" name="noTelp" placeholder="Nomor Telepon">
                 <label for="">Alamat</label>
-                <textarea placeholder="Alamat"></textarea>
+                <textarea placeholder="Alamat" name="Alamat"></textarea>
                 <label for="">Alamat Tujuan</label>
-                <textarea placeholder="Alamat Tujuan"></textarea>
+                <textarea placeholder="Alamat Tujuan"  name="AlamatTujuan"></textarea>
                 <label>Jarak (km)</label>
-                <input type="number" placeholder="0">
+                <input type="number" name="Jarak" placeholder="0">
                 <label for="">Daftar Barang</label>
-                <textarea placeholder="Daftar Barang"></textarea>
+                <textarea placeholder="Daftar Barang" name="DaftarBarang"></textarea>
                 <label>Berat Barang (kg)</label>
-                <input type="number" placeholder="0">
+                <input type="number" placeholder="0" class="weight" name="BeratBarang">
                 <label for="">Tanggal Layanan</label>
-                <input type="date">
+                <input type="date" name="Tanggal">
                 <label for="jenislayanan">Jenis Layanan</label>
-                <select id="jenislayanan">
+                <select id="jenislayanan" name="JenisLayanan">
                     <option value="packing">Packing</option>
                     <option value="pindah">Pindah</option>
                     <option value="packing dan pindah">Packing dan Pindah</option>
                 </select>
-                <div class="price">Perkiraan harga layanan: Rp <span>10.000.000</span></div>
+                <input type="hidden" class="priceHidden" name="KisaranHarga">
+                <div class="price">Perkiraan harga layanan: Rp <span>0</span></div>
                 <div class="buttons">
-                    <form action="{{ route('pembayaran') }}" method="POST">
-                        @csrf
-                        <button type="button" onclick="resetForm()">Batal</button>
-                        <button type="button" onclick="window.location='{{ url('/pembayaran') }}'">Pesan Sekarang</button>
-                    </form>
+                    <button type="button" onclick="resetForm()">Batal</button>
+                    <button type="submit">Pesan Sekarang</button>
                 </div>
             </form>
         </section>
     </main>
-    <script src="{{asset('js/script.js')}}"></script>
-    
+    <script src="{{ asset('js/script.js') }}"></script>
+
 
     <section id="footer" class="footer">
         <div class="footerz">
@@ -120,10 +122,13 @@
             <div class="footer-section">
                 <h3>Tentang Kami</h3>
                 <p>
-                    <strong>ZIPSHIFT</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu imperdiet dolor. Curabitur aliquet fringilla odio, ac tincidunt lectus. Quisque nec cursus lectus, at sollicitudin orci. Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl sed elementum ullamcorper.
+                    <strong>ZIPSHIFT</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
+                    imperdiet dolor. Curabitur aliquet fringilla odio, ac tincidunt lectus. Quisque nec cursus lectus,
+                    at sollicitudin orci. Morbi sollicitudin malesuada ipsum dictum mollis. Aliquam feugiat nisl sed
+                    elementum ullamcorper.
                 </p>
             </div>
-    
+
             <div class="footer-section">
                 <h3>Alamat Kantor</h3>
                 <p><strong>MALANG</strong></p>
@@ -131,7 +136,7 @@
                 <p><strong>JAM OPERASIONAL</strong></p>
                 <p><strong>Senin s.d Minggu</strong><br>00.00 - 00.00</p>
             </div>
-    
+
             <div class="footer-section">
                 <h3>Site Map</h3>
                 <ul>
@@ -142,9 +147,10 @@
                 </ul>
             </div>
         </div>
-        
+
     </section>
 
     <script src="orderForm.js"></script>
 </body>
+
 </html>
