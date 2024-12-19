@@ -1,4 +1,3 @@
-kayaknya di bagian route, samain sama ini:
 <?php
 
 use Illuminate\Support\Facades\Route;

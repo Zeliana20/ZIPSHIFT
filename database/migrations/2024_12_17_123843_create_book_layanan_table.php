@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('DaftarBarang', 250);
             $table->float('BeratBarang')->nullable();
             $table->date('Tanggal');
-            $table->enum('JenisLayanan', ['Express', 'Regular'])->nullable();
+            $table->enum('JenisLayanan', ['Packing', 'Pindah', 'Packing & Pindah'])->nullable();
             $table->integer('KisaranHarga');
             $table->timestamps();
         });
