@@ -13,7 +13,7 @@
         <div class="logo">
             <img src="{{ asset('assets/logo fix.png') }}" alt="Logo">
         </div>
-
+        
         <ul>
             <li><a href="{{ route('homepage-login') }}">Home</a></li>
             <li><a href="#about">Tentang</a></li>
@@ -97,11 +97,7 @@
                 <label for="">Tanggal Layanan</label>
                 <input type="date" name="Tanggal">
                 <label for="jenislayanan">Jenis Layanan</label>
-                <select id="jenislayanan" name="JenisLayanan">
-                    <option value="packing">Packing</option>
-                    <option value="pindah">Pindah</option>
-                    <option value="packing dan pindah">Packing dan Pindah</option>
-                </select>
+                <input type="jenislayanan" name="JenisLayanan">
                 <input type="hidden" class="priceHidden" name="KisaranHarga">
                 <div class="price">Perkiraan harga layanan: Rp <span>0</span></div>
                 <div class="buttons">

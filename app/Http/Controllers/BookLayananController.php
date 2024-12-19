@@ -31,6 +31,10 @@ class BookLayananController extends Controller
             'KisaranHarga' => $request->input('KisaranHarga'),
         ]);
 
+        $request->validate([
+          'JenisLayanan' => 'nullable|in:Packing,Pindah,Packing dan Pindah',
+        ]);
+
         // Redirect ke halaman pembayaran
         return redirect()->route('pembayaran', ['kisaranHarga' => $bookLayanan->KisaranHarga]); // Ganti dengan rute yang sesuai
     }
