@@ -9,6 +9,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SurveyBookingController;
 use App\Http\Controllers\BookLayananController;
 use App\Http\Controllers\BayarLayananController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReviewController;
 
 
@@ -103,6 +104,10 @@ Route::get('/doneSurvey', function () {
     return view('doneSurvey');
 });
 
+Route::get('/doneSurvey', [PaymentController::class, 'doneSurvey'])->name('doneSurvey');
+Route::post('/doneSurvey', [PaymentController::class, 'doneSurvey'])->name('doneSurvey.post');
+
+
 // Menampilkan form review
 Route::get('/review', [ReviewController::class, 'create'])->name('review.create');
 
@@ -129,3 +134,6 @@ Route::post('/pembayaranSurvei', [SurveyBookingController::class, 'showpembayara
 Route::post('/doneSurvey', [SurveyBookingController::class, 'showdoneSurvey'])->name('doneSurvey');
 Route::post('/book-layanan', [BookLayananController::class, 'storeBooking'])->name('book-layanan.storeBooking');
 Route::post('/bayar-layanan', [BayarLayananController::class, 'storePayment'])->name('bayar-layanan.storePayment');
+
+
+Route::post('/upload', [PaymentController::class, 'upload'])->name('upload');

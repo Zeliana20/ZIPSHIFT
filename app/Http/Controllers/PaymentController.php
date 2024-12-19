@@ -24,4 +24,19 @@ class PaymentController extends Controller
 
         return back()->with('error', 'Gagal mengunggah file.');
     }
+
+    public function doneSurvey(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            // Proses data POST
+            $uploadedFilePath = $request->input('uploaded_file_path');
+            
+            // Lakukan tindakan, misalnya menyimpan ke database
+    
+            return view('doneSurvey')->with('success', 'Pembayaran berhasil!');
+        }
+    
+        // Untuk GET
+        return view('doneSurvey');
+    }
 }

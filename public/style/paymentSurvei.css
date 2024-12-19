@@ -84,7 +84,7 @@ nav ul li a:hover {
 }
 
 .group h3 {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -106,10 +106,19 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.bagian-bank h4, .bagian-norek h4 {
+.bagian-bank h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 650;
+    padding-left: 1.2rem;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.bagian-norek h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     padding-left: 1rem;
     text-align: center;
 }
@@ -154,14 +163,11 @@ nav ul li a:hover {
 .buttons {
     margin-top: 70px;
     text-align: center;
-}
-
-.buttons a {
     text-decoration: none;
     color: #4D3526;
 }
 
-.buttons a:hover {
+.buttons:hover {
     color: #C1A57B;
 }
 
@@ -174,15 +180,12 @@ nav ul li a:hover {
     font-size: 1.3rem;
     font-weight: bold;
     margin-left: 20px;
-}
-
-.buttons button:first-child {
     background-color: #C8B273;
     color: #4D3526;
     border: 1px solid #8B7355;
 }
 
-.buttons button:first-child:hover {
+.buttons button:hover {
     background-color: #4D3526;
     color: #C8B273;
     transition: 0.3ms;
