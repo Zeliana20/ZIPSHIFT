@@ -23,7 +23,7 @@ class SurveyBookingController extends Controller
             'alamat_lengkap_rumah' => 'required|string|max:500',
             'catatan_tambahan' => 'nullable|string|max:1000',
         ]);
-    
+
         // Menyimpan data ke database
         $surveyBooking = SurveyBooking::create([
             'nama' => $request->input('nama'),
@@ -32,9 +32,15 @@ class SurveyBookingController extends Controller
             'alamat_lengkap_rumah' => $request->input('alamat_lengkap_rumah'),
             'catatan_tambahan' => $request->input('catatan_tambahan'),
         ]);
-        
+
+
+
         // Redirect ke halaman payment
         return redirect()->route('pembayaran');
     }
-    
+    public function showdoneSurvey(Request $request)
+    {
+        // Logika untuk halaman doneSurvey
+        return view('doneSurvey'); 
+    }
 }
