@@ -128,7 +128,7 @@ Route::get('/tentang-kami', [PageController::class, 'showTentangKami'])->name('t
 Route::get('/homepage-login', [PageController::class, 'showHomepageLogin'])->name('homepage-login'); // Mengarah ke homepageLogin.blade.php
 Route::get('/service', [PageController::class, 'showService'])->name('service'); // Mengarah ke homepageLogin.blade.php
 Route::get('/inputReview', [PageController::class, 'showinputReview'])->name('inputReview');
-Route::post('/store-booking', [BookingController::class, 'store'])->name('store-booking');
+Route::post('/store-booking', [SurveyBookingController::class, 'storeBooking'])->name('store-booking');
 Route::post('/upload', [SurveyBookingController::class, 'storeBooking'])->name('upload');
 Route::post('/pembayaranSurvei', [SurveyBookingController::class, 'showpembayaranSurvei'])->name('pembayaranSurvei');
 Route::post('/doneSurvey', [SurveyBookingController::class, 'showdoneSurvey'])->name('doneSurvey');

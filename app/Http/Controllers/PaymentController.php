@@ -10,12 +10,12 @@ class PaymentController extends Controller
     {
         // Validasi file
         $request->validate([
-            'uploaded_file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Maks 2MB, hanya gambar
+            'BuktiPembayaran' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Maks 2MB, hanya gambar
         ]);
 
         // Simpan file ke direktori storage
-        if ($request->hasFile('uploaded_file')) {
-            $file = $request->file('uploaded_file');
+        if ($request->hasFile('BuktiPembayaran')) {
+            $file = $request->file('BuktiPembayaran');
             $filename = time() . '_' . $file->getClientOriginalName(); // Nama unik untuk file
             $file->storeAs('public/uploads', $filename); // Simpan file di storage/app/public/uploads
 
